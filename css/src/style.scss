@@ -1,0 +1,21 @@
+.wp-block-shokka-forms-text-input {
+  margin: 20px 0;
+
+  input {
+    display: block;
+  }
+
+  label {
+    display: block;
+  }
+
+  .sf-description {
+    font-size: 0.75em;
+  }
+
+  .sf-error {
+    font-size: 0.75em;
+    color: red;
+    display: block;
+  }
+}
