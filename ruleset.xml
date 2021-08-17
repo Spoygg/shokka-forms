@@ -8,7 +8,7 @@
 	<exclude-pattern>/js/*</exclude-pattern>
 	<exclude-pattern>/css/*</exclude-pattern>
 	<exclude-pattern>*.js</exclude-pattern>
-
+	<exclude-pattern>tests/bootstrap.php</exclude-pattern>
 
 	<!-- Exclude minified Javascript files. -->
 	<exclude-pattern>*.min.js</exclude-pattern>
@@ -37,15 +37,6 @@
 	<rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
 	<rule ref="PSR1.Methods.CamelCapsMethodName"/>
 
-	<!--
-	To get the optimal benefits of using WPCS, we should add a couple of
-	custom properties.
-	Adjust the values of these properties to fit our needs.
-
-	For information on additional custom properties available, check out
-	the wiki:
-	https://github.com/WordPress/WordPress-Coding-Standards/wiki/Customizable-sniff-properties
-	-->
 	<config name="minimum_supported_wp_version" value="5.8"/>
 
 	<!-- Custom rules. -->
