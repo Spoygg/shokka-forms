@@ -5,6 +5,7 @@
   "main": "js/dist/editor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:php": "vendor/bin/phpunit",
     "build": "webpack",
     "build:watch": "webpack -w",
     "build:prod": "webpack --env production",
@@ -29,6 +30,10 @@
     "webpack-cli": "^4.7.2"
   },
   "semistandard": {
-    "globals": ["wp", "ShokkaForms", "jQuery"]
+    "globals": [
+      "wp",
+      "ShokkaForms",
+      "jQuery"
+    ]
   }
 }
