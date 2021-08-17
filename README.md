@@ -21,48 +21,56 @@ To set up development environemt you need to:
 
     !!! Database that you point to will be wiped on each test run, so make sure you are not using database with any relevant information!!!
 
-This will all needed packages.
+With this steps all needed tools are installed.
 
 ## Development tools
 
 There are several npm scripts that can be used to validate, format and build code.
 
 Run PHP tests:
+
     ```
     npm run test:php
     ```
 
 Build assets (js, css) for development environment:
+
     ```
     npm run build
     ```
 
 Build and watch assets for development:
+
     ```
     npm run build:watch
     ```
 
 Build assets for use in production environment:
+
     ```
     npm run build:prod
     ```
 
 Check php code against Coding Standards:
+
     ```
     npm run lint:php
     ```
 
 Format php code against Coding Standards. This will only fix some issues, make sure that you manually fix remaining issues before making a commit.
+
     ```
     npm run format:php
     ```
 
 Check JavaScript code against Coding Standards:
+
     ```
     npm run lint:js
     ```
 
 Format JavaScript code against Coding Standards.
+
     ```
     npm run format:js
     ```
