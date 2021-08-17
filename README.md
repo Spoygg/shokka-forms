@@ -29,50 +29,34 @@ There are several npm scripts that can be used to validate, format and build cod
 
 Run PHP tests:
 
-    ```
     npm run test:php
-    ```
 
 Build assets (js, css) for development environment:
 
-    ```
     npm run build
-    ```
 
 Build and watch assets for development:
 
-    ```
     npm run build:watch
-    ```
 
 Build assets for use in production environment:
 
-    ```
     npm run build:prod
-    ```
 
 Check php code against Coding Standards:
 
-    ```
     npm run lint:php
-    ```
 
 Format php code against Coding Standards. This will only fix some issues, make sure that you manually fix remaining issues before making a commit.
 
-    ```
     npm run format:php
-    ```
 
 Check JavaScript code against Coding Standards:
 
-    ```
     npm run lint:js
-    ```
 
 Format JavaScript code against Coding Standards.
 
-    ```
     npm run format:js
-    ```
 
-There are configurations for linters in project root. Make sure you IDE/Code Editor uses those configurations for reporting linting errors.
+There are configurations for linters in project root. Make sure your IDE/Code Editor uses those configurations for reporting linting errors.
