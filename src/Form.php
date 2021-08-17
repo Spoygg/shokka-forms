@@ -183,19 +183,19 @@ class Form {
             return true;
         }
         if ( 'email' === $type ) {
-            return is_email( $value );
+            return false !== is_email( $value );
         }
         if ( 'number' === $type ) {
-            return 1 === preg_match( '/^[0-9]$/', $value );
+            return 1 === preg_match( '/^[0-9]+$/', $value );
         }
         if ( 'tel' === $type ) {
-            return 1 === preg_match( '/^[\d+\(\)]$/', '', $value );
+            return 1 === preg_match( '/^[\d+\(\)]+$/', $value );
         }
         if ( 'date' === $type ) {
             return false !== strtotime( $value );
         }
         if ( 'time' === $type ) {
-            return 1 === preg_match( '/^[\d:]$/', $value );
+            return 1 === preg_match( '/^\d+:\d+(:\d+)?$/', $value );
         }
     }
 
