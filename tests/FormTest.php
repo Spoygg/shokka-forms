@@ -1,8 +1,16 @@
 <?php
+/**
+ * Tests for Form class.
+ *
+ * @author ivanic
+ */
 
 use ShokkaForms\Form;
 
 class FormTest extends WP_UnitTestCase {
+    /**
+     * Test form field validation per type.
+     */
     public function testValidateField() {
         $post_id = $this->factory->post->create(
             array(
@@ -10,8 +18,8 @@ class FormTest extends WP_UnitTestCase {
                 'post_type'  => 'post',
             )
         );
-        $post = get_post( $post_id );
-        $form = new Form( $post );
+        $post    = get_post( $post_id );
+        $form    = new Form( $post );
 
         $isValid = $form->validateField( 'abcd!?1.~°˛^ˇ`', 'text' );
         $this->assertTrue( $isValid );
@@ -29,16 +37,16 @@ class FormTest extends WP_UnitTestCase {
         $this->assertFalse( $isNotValid );
 
         $isValid = $form->validateField( 'someone@example.com', 'email' );
-        $this->assertTrue( $isValid ); 
+        $this->assertTrue( $isValid );
 
         $isNotValid = $form->validateField( 'someoneexample.com', 'email' );
-        $this->assertFalse( $isNotValid ); 
+        $this->assertFalse( $isNotValid );
 
         $isValid = $form->validateField( '+(381)601234565', 'tel' );
-        $this->assertTrue( $isValid, '+(381)601234565 should be a valid tel' ); 
+        $this->assertTrue( $isValid, '+(381)601234565 should be a valid tel' );
 
         $isNotValid = $form->validateField( 'abc123!!!', 'tel' );
-        $this->assertFalse( $isNotValid, 'abc123!!! should not be a valid tel' ); 
+        $this->assertFalse( $isNotValid, 'abc123!!! should not be a valid tel' );
 
         $isValid = $form->validateField( '12/12/2020', 'date' );
         $this->assertTrue( $isValid );
